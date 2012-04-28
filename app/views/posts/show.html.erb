@@ -13,7 +13,7 @@
 <p>
   <b>Body:</b>
   <%= image_tag @post.photo.url(:medium), :class => 'image' %>
-  <%= @post.body %>
+  <%= raw @post.body %>
 </p>
 <p>
   <b>Tags:</b>

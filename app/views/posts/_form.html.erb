@@ -1,5 +1,5 @@
 <% @post.tags.build %>
-<%= form_for @post, :html => { :multipart => true } do |f| %>
+<%= semantic_form_for @post, :html => { :multipart => true } do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -16,7 +16,6 @@
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
-
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
